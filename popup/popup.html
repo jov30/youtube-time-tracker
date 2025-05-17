@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Time Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>YouTube Time Tracker</h1>
+  </header>
+
+  <main>
+    <section id="controls">
+      <button id="exportButton" class="button primary">Export to CSV</button>
+      <button id="clearButton" class="button secondary">Clear History</button>
+    </section>
+
+    <section id="history">
+      <h2>Watch History</h2>
+      <div id="historyList" class="history-container">
+        <!-- History items will be inserted here -->
+      </div>
+      <div id="emptyState" class="empty-state hidden">
+        <p>No watch history yet</p>
+      </div>
+    </section>
+
+    <div id="toast" class="toast hidden">
+      <!-- Toast messages will appear here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>Track your YouTube watching habits</p>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html> 

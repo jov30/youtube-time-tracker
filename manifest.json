@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Time Tracker",
+  "version": "1.0",
+  "description": "Track your actual YouTube video watch time with detailed statistics",
+  
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  
+  "permissions": [
+    "storage",
+    "tabs",
+    "*://*.youtube.com/*"
+  ],
+  
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    },
+    "default_title": "YouTube Time Tracker",
+    "default_popup": "popup/popup.html"
+  },
+  
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  
+  "content_scripts": [{
+    "matches": ["*://*.youtube.com/*"],
+    "js": ["content.js"]
+  }],
+  
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-time-tracker@example.com"
+    }
+  }
+} 
